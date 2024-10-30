@@ -1,2 +1,2 @@
 # TeamSmartie_Appdev
-Mao ni atong github guyses
+Mao ni atong github guysesMEMBERS: 
