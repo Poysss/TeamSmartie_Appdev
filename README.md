@@ -41,25 +41,25 @@ Make sure you have the following installed:
   *	Maven
   *	MySQL
 Installation
-  1.	Clone the repository
+1. Clone the repository
       * git clone https://github.com/your_username/smartie.git
-  2.	Set up the backend
+2.	Set up the backend
       * cd smartie/backend
       * mvn clean install
-  3.	Configure MySQL database
+3.	Configure MySQL database
      
 ## Create a new database named 'smartie'
   mysql -u root -p
   CREATE DATABASE smartie;
   
-  4.	Update application.properties with your database credentials
+4.	Update application.properties with your database credentials
      * spring.datasource.url=jdbc:mysql://localhost:3306/smartie
      * spring.datasource.username=your_username
      * spring.datasource.password=your_password
-  5.	Install frontend dependencies
+5.	Install frontend dependencies
      * cd ../frontend
      * npm install
-  7.	Start the application
+6.	Start the application
 
 # Start backend (from backend directory)
   mvn spring-boot:run
