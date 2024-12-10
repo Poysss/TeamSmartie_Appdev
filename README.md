@@ -61,10 +61,10 @@ Installation
      * npm install
 6.	Start the application
 
-# Start backend (from backend directory)
+## Start backend (from backend directory)
   mvn spring-boot:run
 
-# Start frontend (from frontend directory)
+## Start frontend (from frontend directory)
   npm run dev
   
 ## Usage
