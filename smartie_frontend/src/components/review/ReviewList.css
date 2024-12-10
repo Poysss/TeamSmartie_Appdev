@@ -1,0 +1,254 @@
+
+.review-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 80px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 3rem;
+}
+
+.review-header h1 {
+  color: white;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.search-section {
+  flex: 1;
+  max-width: 600px;
+  min-width: 400px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.search-bar input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar svg {
+  color: var(--accent);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  animation: slideIn 0.5s ease-out forwards;
+  animation-delay: var(--delay);
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.review-card.correct {
+  border-left: 4px solid #4CAF50;
+}
+
+.review-card.incorrect {
+  border-left: 4px solid #FF5252;
+}
+
+.review-card.mixed {
+  border-left: 4px solid var(--accent);
+}
+
+.review-card .review-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 0;
+}
+
+.review-card .review-header h3 {
+  flex: 1;
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.status-icon.correct {
+  color: #4CAF50;
+}
+
+.status-icon.incorrect {
+  color: #FF5252;
+}
+
+.status-icon.mixed {
+  color: var(--accent);
+}
+
+.review-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.review-content {
+  padding: 1.5rem;
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.answer-section {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.answer-section h4 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.answer-section p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.answer-section.incorrect {
+  background: rgba(255, 82, 82, 0.1);
+}
+
+.answer-section.correct {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+.review-actions {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.view-details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.empty-state svg {
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.empty-state h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.review-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  gap: 1rem;
+  color: var(--accent);
+}
+
+.error-message {
+  background: rgba(255, 82, 82, 0.1);
+  color: #FF5252;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .review-list-container {
+    padding: 1rem;
+    padding-top: 80px;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .search-section {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .review-card {
+    margin-bottom: 1rem;
+  }
+
+  .answer-section {
+    padding: 0.75rem;
+  }
+}
