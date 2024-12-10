@@ -52,12 +52,12 @@ Installation
   mysql -u root -p
   CREATE DATABASE smartie;
   4.	Update application.properties with your database credentials
-      spring.datasource.url=jdbc:mysql://localhost:3306/smartie
-      spring.datasource.username=your_username
-      spring.datasource.password=your_password
+     spring.datasource.url=jdbc:mysql://localhost:3306/smartie
+     spring.datasource.username=your_username
+     spring.datasource.password=your_password
   5.	Install frontend dependencies
-      cd ../frontend
-      npm install
+     cd ../frontend
+     npm install
   6.	Start the application
 
 # Start backend (from backend directory)
